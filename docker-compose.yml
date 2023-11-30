@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  articles.todayintel.com:
+    build: .
+    image: cornatul/articles.todayintel.com
+    container_name: articles.todayintel.com
+    restart: always
+    ports:
+      - "8003:8003"
+    volumes:
+      - .:/var/www/html
